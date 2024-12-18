@@ -1,0 +1,41 @@
+ITEM	OPTIONS
+
+replace		true
+field		pcff
+density		0.01
+temperature  500
+# 공식= 단위 polymer 연결된 monomer 수 * 60 * 원하는  polymer  수
+ntotal		6000
+
+
+#system_charge           false
+
+ITEM	END
+
+# Groups
+
+ITEM	GROUPS
+
+polyimide		*c1cccc(Oc2ccc(N3C(=O)c4ccc(C(c5ccc6c(c5)C(=O)N(*)C6=O)(C(F)(F)F)C(F)(F)F)cc4C3=O)cc2)c1,1,polyimide:2
+methyl		*C,1,polyimide:1,1,polyimide:2
+
+ITEM	END
+
+# Clusters
+
+ITEM	CLUSTERS
+
+poly		alternate	1
+
+ITEM	END
+
+# Polymers
+
+ITEM	POLYMERS
+
+
+
+poly
+100		polyimide,100   #공식 polymer 는 몇 개의 모노머로 이루어져 있는가
+
+ITEM	END
